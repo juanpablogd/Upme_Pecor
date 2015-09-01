@@ -1,0 +1,85 @@
+﻿@model IEnumerable<NSPecor.Models.MUB_USUARIOS>
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Usuarios</h2>
+
+    <p>
+        @Html.ActionLink("Crear Usuario", "../Account/Register")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NOMBRE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CARGO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DIRECCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFONO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CELULAR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_ORGANIZACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ESTADO)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CARGO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DIRECCION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TELEFONO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CELULAR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMAIL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MUB_ORGANIZACIONES.RAZON_SOCIAL)
+                </td>
+                <td>
+                    @if (item.ESTADO.ToString() == "1")
+                    {
+                        @MvcHtmlString.Create("ACTIVO") 
+                    }
+                    else
+                    {
+                        @MvcHtmlString.Create("INACTIVO") 
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_USUARIO }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.ID_USUARIO }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.ID_USUARIO })
+                    @Html.ActionLink("Rol", "rol", new { id = item.ID_USUARIO, nombre = item.NOMBRE }, new { @class = "btn btn-warning btn-xs" })
+                </td>
+            </tr>
+        }
+
+    </table>

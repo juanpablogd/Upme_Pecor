@@ -1,0 +1,26 @@
+﻿@model NSPecor.Models.MUB_TIPO_ORGANIZACION
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>TIPO ORGANIZACIÓN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_TIPO_ORG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_TIPO_ORG)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_TIPO_ORGANIZACION }) |
+    @Html.ActionLink("Ver Listado", "Index")
+</p>

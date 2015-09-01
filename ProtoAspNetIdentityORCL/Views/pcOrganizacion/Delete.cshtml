@@ -1,0 +1,103 @@
+﻿@model NSPecor.Models.MUB_ORGANIZACIONES
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea Eliminarlo?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAZON_SOCIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAZON_SOCIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REPRESENTANTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REPRESENTANTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIGLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIGLA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MP_UPME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MP_UPME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_AREA_DISTRIBUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_AREA_DISTRIBUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO)
+        </dd>
+        <dt>
+            TIPO ORG.
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MUB_TIPO_ORGANIZACION.NOM_TIPO_ORG)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Ver Listado", "Index")
+        </div>
+    }
+</div>

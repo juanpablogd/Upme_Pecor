@@ -1,0 +1,50 @@
+﻿@model NSPecor.Models.MUB_PECOR_CP_VSS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VSS_BENEF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VSS_BENEF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEMANDA_ANUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEMANDA_ANUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BC_DP_SITIOS_UPME.NOMBRE_SITIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BC_DP_SITIOS_UPME.NOMBRE_SITIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUB_PROYECTOS_PECOR.CODIGO_UPME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_PROYECTOS_PECOR.CODIGO_UPME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_CP_PY }) |
+    @Html.ActionLink("Ver Listado", "Index")
+</p>

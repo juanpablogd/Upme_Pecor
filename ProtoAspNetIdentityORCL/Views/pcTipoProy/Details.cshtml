@@ -1,0 +1,35 @@
+﻿@model NSPecor.Models.MU_TIPO_PROY_PECOR
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>TIPO DE PROYECTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+        <dt>
+            ESTADO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MU_ESTADO.DESCRIPCION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_TIPO_PROY_PECOR }) |
+    @Html.ActionLink("Ver Listado", "Index")
+</p>

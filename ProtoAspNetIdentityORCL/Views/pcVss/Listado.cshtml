@@ -1,0 +1,52 @@
+﻿@model IEnumerable<NSPecor.Models.MUB_PECOR_CP_VSS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VSS_BENEF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEMANDA_ANUAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BC_DP_SITIOS_UPME.COD_CP_UPME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MU_PROYECTOS_PECOR.PROG_PROY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VSS_BENEF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEMANDA_ANUAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BC_DP_SITIO_UPME.COD_CP_UPME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MU_PROYECTOS_PECOR.PROG_PROY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_CP_PY }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_CP_PY }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_CP_PY })
+        </td>
+    </tr>
+}
+
+</table>

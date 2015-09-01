@@ -1,0 +1,39 @@
+﻿@model NSPecor.Models.IndexViewModel
+@{
+    ViewBag.Title = "Configuración de Usuario";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>@ViewBag.Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Nombre: </dt>
+        <dd>@ViewBag.Nombre</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>Organización: </dt>
+        <dd>@ViewBag.Organizacion</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>Perfil: </dt>
+        <dd>@ViewBag.Perfil</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>Clave:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Cambiar contraseña", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Crear Contraseña", "SetPassword")
+            }
+            ]
+        </dd>
+    </dl>
+</div>

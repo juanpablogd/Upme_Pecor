@@ -1,0 +1,23 @@
+﻿@* @model NSPecor.Models.MUB_USUARIOS_ROLES    *@
+@model IEnumerable<NSPecor.Models.MUB_USUARIOS_ROLES> 
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+@foreach (var item in Model) {
+        <dd>USUARIO: @Html.DisplayFor(modelItem => item.MUB_USUARIOS.NOMBRE)</dd><br>
+        <dd>ROL: @Html.DisplayFor(modelItem => item.MUB_ROL.NOMBRE)</dd><br>
+}           
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

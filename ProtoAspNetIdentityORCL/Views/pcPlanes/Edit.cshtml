@@ -1,0 +1,74 @@
+﻿@model NSPecor.Models.MUB_PECOR_PLAN
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Editar</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PLANES PECOR</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_PLAN)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DESCRIPCION, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DESCRIPCION)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FECHA_INICIO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FECHA_INICIO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FECHA_INICIO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FECHA_FINAL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FECHA_FINAL, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FECHA_FINAL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ACTIVO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @* Html.EditorFor(model => model.ACTIVO)  *@
+                    @Html.DropDownListFor(model => model.ACTIVO, new SelectList(
+                                                                              new List<Object>{
+                                                                                   new { value = "S" , text = "SI"  },
+                                                                                   new { value = "N" , text = "NO" }
+                                                                                },
+                                                                              "value",
+                                                                              "text")
+                                , htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ACTIVO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Ver Listado", "Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/calendariojs")
+    @Styles.Render("~/bundles/calendariocss")
+    @Scripts.Render("~/bundles/Planes")
+}

@@ -1,0 +1,32 @@
+﻿@model NSPecor.Models.MUB_TIPO_ORGANIZACION
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea Eliminarlo?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_TIPO_ORG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_TIPO_ORG)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Ver listado", "Index")
+        </div>
+    }
+</div>

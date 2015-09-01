@@ -1,0 +1,146 @@
+﻿@model NSPecor.Models.MUH_PECOR_COBERTURA
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>MUH_PECOR_COBERTURA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DPTO_CCDGO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DPTO_CCDGO)
+                @Html.ValidationMessageFor(model => model.DPTO_CCDGO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MPIO_CCDGO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MPIO_CCDGO)
+                @Html.ValidationMessageFor(model => model.MPIO_CCDGO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VIGENCIA_ANT, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VIGENCIA_ANT)
+                @Html.ValidationMessageFor(model => model.VIGENCIA_ANT)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VSS_BENEFIADAS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VSS_BENEFIADAS)
+                @Html.ValidationMessageFor(model => model.VSS_BENEFIADAS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_PLAN, "ID_PLAN", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_PLAN", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_PLAN)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ICEE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ICEE)
+                @Html.ValidationMessageFor(model => model.ICEE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.V_TOTAL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.V_TOTAL)
+                @Html.ValidationMessageFor(model => model.V_TOTAL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VSS_TOTAL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VSS_TOTAL)
+                @Html.ValidationMessageFor(model => model.VSS_TOTAL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NBI, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NBI)
+                @Html.ValidationMessageFor(model => model.NBI)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ICEE_VIVTOT, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ICEE_VIVTOT)
+                @Html.ValidationMessageFor(model => model.ICEE_VIVTOT)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ICEE_VSS_TOT, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ICEE_VSS_TOT)
+                @Html.ValidationMessageFor(model => model.ICEE_VSS_TOT)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CU_DIESEL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CU_DIESEL)
+                @Html.ValidationMessageFor(model => model.CU_DIESEL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DPTO_NOMBRE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DPTO_NOMBRE)
+                @Html.ValidationMessageFor(model => model.DPTO_NOMBRE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MPIO_NOMBRE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MPIO_NOMBRE)
+                @Html.ValidationMessageFor(model => model.MPIO_NOMBRE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

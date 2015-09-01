@@ -1,0 +1,59 @@
+﻿@model IEnumerable<NSPecor.Models.MUB_PECOR_PLAN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Planes</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_INICIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_FINAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACTIVO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_INICIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_FINAL)
+        </td>
+        <td>
+            @if (item.ACTIVO == "S")
+            {
+                @(String.Format("SI"));
+            }
+            else
+            {
+                @(String.Format("NO"));
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID_PLAN }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.ID_PLAN }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ID_PLAN })
+        </td>
+    </tr>
+}
+
+</table>

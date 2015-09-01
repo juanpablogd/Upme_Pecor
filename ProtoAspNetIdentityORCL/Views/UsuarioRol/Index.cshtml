@@ -1,0 +1,45 @@
+﻿@* @model IEnumerable<NSPecor.Models.MUB_USUARIOS_ROLES> *@
+
+@model IEnumerable<NSPecor.Models.MUB_USUARIOS_ROLES>
+
+@{
+    ViewBag.Title = "Roles del Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> @ViewBag.Usuario </h2> 
+
+<p>
+    @Html.ActionLink("Adicionar Rol", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MUB_ROL.NOMBRE) ROL
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUB_ROL.MUB_MODULOS.DESCRIPCION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUB_ROL.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUB_ROL.MUB_MODULOS.DESCRIPCION)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { ID_USUARIO = item.ID_USUARIO, ID_ROL=item.ID_ROL }) |
+@*            @Html.ActionLink("Detalles", "Details", new { ID_USUARIO = item.ID_USUARIO, ID_ROL = item.ID_ROL }) | *@
+            @Html.ActionLink("Borrar", "Delete", new { ID_USUARIO = item.ID_USUARIO, ID_ROL = item.ID_ROL })
+        </td>
+    </tr>
+}
+</table>
+<div class="form-actions no-color">
+    <br> 
+    @Html.ActionLink("Ver Usuarios", "../Usuarios/Index")
+</div>

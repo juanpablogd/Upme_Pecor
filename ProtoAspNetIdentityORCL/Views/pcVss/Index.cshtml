@@ -1,0 +1,67 @@
+﻿@model IEnumerable<NSPecor.Models.MUB_PECOR_CP_VSS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VIVIENDAS BENEFICIADAS</h2>
+
+<p>
+    @Html.ActionLink("Adicionar Viviendas", "Create")
+</p>
+<table class="table">
+@if (ViewBag.SumaVss != "0")
+{
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VSS_BENEF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEMANDA_ANUAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BC_DP_SITIOS_UPME.NOMBRE_SITIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUB_PROYECTOS_PECOR.CODIGO_UPME)
+        </th>
+        <th></th>
+    </tr>
+}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VSS_BENEF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEMANDA_ANUAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BC_DP_SITIOS_UPME.NOMBRE_SITIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUB_PROYECTOS_PECOR.CODIGO_UPME)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID_CP_PY }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.ID_CP_PY }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ID_CP_PY })
+            </td>
+        </tr>
+    }
+    <tr>
+        <th>
+           Total Viviendas: @ViewBag.SumaVss
+        </th>
+        <th>
+            Total Demanda: @ViewBag.SumaDem
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Ver proyectos", "proyectos")
+        </td>
+    </tr>
+</table>

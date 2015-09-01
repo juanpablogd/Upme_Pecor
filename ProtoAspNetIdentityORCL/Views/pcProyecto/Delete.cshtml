@@ -1,0 +1,259 @@
+﻿@model NSPecor.Models.MUB_PROYECTOS_PECOR
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea Eliminarlo?</h3>
+<div>
+    <h4>PROYECTO PECOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PROG_PROY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROG_PROY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            CLASE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_CLASE_CP.NOM_CLASE_CP)
+        </dd>
+
+        <dt>
+            ORGANIZACIÓN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_ORGANIZACIONES.RAZON_SOCIAL)
+        </dd>
+
+        <dt>
+            TIPO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_TIPO_PROY_PECOR.NOM_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REALIZARA_PROYECTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REALIZARA_PROYECTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FINANCIA_ACOMETIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FINANCIA_ACOMETIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INI_EJEC_INV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INI_EJEC_INV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIN_EJE_INV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIN_EJE_INV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUESTA_MARCHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUESTA_MARCHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEMANDA_ANUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEMANDA_ANUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.V_BENEFICIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.V_BENEFICIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIRCUITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIRCUITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIVEL_TENSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIVEL_TENSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RED_MT_KM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RED_MT_KM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RED_BT_KM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RED_BT_KM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_TRANSFORMADORES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_TRANSFORMADORES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOM_N1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOM_N1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_MEDIO_N1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_MEDIO_N1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INVERSION_N1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INVERSION_N1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOM_N2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOM_N2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_MEDIO_N2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_MEDIO_N2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INVERSION_N2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INVERSION_N2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOM_N3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOM_N3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_MEDIO_N3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_MEDIO_N3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INVERSION_N3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INVERSION_N3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CU_MODIFICADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CU_MODIFICADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_USUARIO_REGISITRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_USUARIO_REGISITRO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_REGISTRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_REGISTRO)
+        </dd>
+
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Ver Listado", "Index")
+        </div>
+    }
+</div>

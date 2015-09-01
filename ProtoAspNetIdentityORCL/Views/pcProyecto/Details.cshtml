@@ -1,0 +1,280 @@
+﻿@model NSPecor.Models.MUB_PROYECTOS_PECOR
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>PROYECTOS PECOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            PLAN
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MUB_PECOR_PLAN.DESCRIPCION)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PROG_PROY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROG_PROY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_UPME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_UPME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            CLASE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_CLASE_CP.NOM_CLASE_CP)
+        </dd>
+
+        <dt>
+            ORGANIZACIÓN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_ORGANIZACIONES.RAZON_SOCIAL)
+        </dd>
+
+        <dt>
+            SUBESTACIÓN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VISTA_SUBESTACION.NOM_SUBESTACION)
+        </dd>
+
+        <dt>
+            ´TIPO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_TIPO_PROY_PECOR.NOM_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REALIZARA_PROYECTO)
+        </dt>
+
+        <dd>
+            @if (Html.DisplayFor(model => model.REALIZARA_PROYECTO).ToString() == "S")
+            {
+                @(String.Format("SI"));
+            }
+            else
+            {
+                @(String.Format("NO"));
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADMIN_PROYECTO)
+        </dt>
+
+        <dd>
+            @if (Html.DisplayFor(model => model.ADMIN_PROYECTO).ToString() == "S")
+            {
+                @(String.Format("SI"));
+            }
+            else
+            {
+                @(String.Format("NO"));
+            }
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FINANCIA_ACOMETIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FINANCIA_ACOMETIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INI_EJEC_INV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INI_EJEC_INV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIN_EJE_INV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIN_EJE_INV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUESTA_MARCHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUESTA_MARCHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEMANDA_ANUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEMANDA_ANUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.V_BENEFICIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.V_BENEFICIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIRCUITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIRCUITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIVEL_TENSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIVEL_TENSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RED_MT_KM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RED_MT_KM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RED_BT_KM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RED_BT_KM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_TRANSFORMADORES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_TRANSFORMADORES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOM_N1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOM_N1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_MEDIO_N1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_MEDIO_N1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INVERSION_N1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INVERSION_N1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOM_N2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOM_N2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_MEDIO_N2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_MEDIO_N2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INVERSION_N2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INVERSION_N2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOM_N3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOM_N3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_MEDIO_N3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_MEDIO_N3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INVERSION_N3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INVERSION_N3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CU_MODIFICADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CU_MODIFICADO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @* Html.ActionLink("Editar", "Edit", new { id = Model.ID_PROYECTO_PECOR }) | *@ 
+    @Html.ActionLink("Ver Listado", "Index")
+</p>

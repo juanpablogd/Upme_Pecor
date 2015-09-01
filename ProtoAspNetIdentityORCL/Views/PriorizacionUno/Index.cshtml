@@ -1,0 +1,111 @@
+﻿@model IEnumerable<NSPecor.Models.MUH_PECOR_COBERTURA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CALCULAR PARAMETROS DEL PLAN</h2>
+
+<form id="form_Calcular" name="form_Calcular" method="post">
+    <p>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.DropDownList("VID_PLAN", null, "--Seleccione el Plan--", htmlAttributes: new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <button type="button" id="btn_submit" value="Calcular" class="btn btn-default">Calcular</button>
+            </div>
+        </div>
+    </p>
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            PLAN
+        </th>
+        <th>
+            DEPARTAMENTO
+        </th>
+        <th>
+            MUNICIPIO
+        </th>
+        <th>
+            VIVIENDAS TOTAL
+        </th>
+        <th>
+            VIVIENDAS SIN SERVICIO TOTAL
+        </th>
+        <th>
+            VIVIENDAS SIN SERVICIO BENEFICIADAS
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ICEE)
+        </th>
+        <th>
+            ICEE VIVIENDAS TOTAL
+        </th>
+        <th>
+            ICEE VIVIENDAS SIN SERVICIO TOTAL
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CU_DIESEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NBI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUB_PECOR_PLAN.DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DPTO_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MPIO_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.V_TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VSS_TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VSS_BENEFIADAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ICEE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ICEE_VIVTOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ICEE_VSS_TOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CU_DIESEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NBI)
+        </td>
+@* <td>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>   *@
+    </tr>
+}
+
+</table>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/PriorizacionUno")
+}

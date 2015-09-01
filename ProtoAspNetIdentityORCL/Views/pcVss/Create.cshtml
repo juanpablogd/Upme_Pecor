@@ -1,0 +1,85 @@
+﻿@model NSPecor.Models.MUB_PECOR_CP_VSS
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Crear</h2>
+@using (Html.BeginForm( )) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>BENEFICIO PROYECTO</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_PROYECTO_PECOR, "PROYECTO PECOR", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_PROYECTO_PECOR", null, htmlAttributes: new { @class = "form-control", disabled = "disabled" } )
+                @Html.ValidationMessageFor(model => model.ID_PROYECTO_PECOR, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="COD_DPTO">DEPARTAMENTO</label>
+            <div class="col-md-10">
+                @Html.DropDownList("COD_DPTO",null,"--Seleccione el Departamento--",new{  @class = "form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="COD_MPIO">MUNICIPIO</label>
+            <div class="col-md-10">
+                @Html.DropDownList("COD_MPIO", null, "--Seleccione el Municipio--", new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_CENTRO_POBLADO, "CENTRO POBLADO", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_CENTRO_POBLADO", null, "--Seleccione el Sitio--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_CENTRO_POBLADO, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-5 text-danger" align="right">
+                @ViewBag.MsjValidaCentroPob
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VSS_BENEF, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VSS_BENEF, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VSS_BENEF, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-10 text-danger">
+                @ViewBag.MsjValida
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DEMANDA_ANUAL, htmlAttributes: new { @class = "control-label col-md-2" }) 
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DEMANDA_ANUAL , new { htmlAttributes = new { @class = "form-control", @placeholder = "Demanda en kW/h" } })  kW/h
+                @Html.ValidationMessageFor(model => model.DEMANDA_ANUAL, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-5 text-danger" align="right">
+                @ViewBag.MsjValidaDemanda
+            </div>
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btn_submit" type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Ver Listado", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/vss")
+}

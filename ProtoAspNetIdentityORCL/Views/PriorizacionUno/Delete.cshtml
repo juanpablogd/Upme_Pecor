@@ -1,0 +1,113 @@
+﻿@model NSPecor.Models.MUH_PECOR_COBERTURA
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MUH_PECOR_COBERTURA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VSS_BENEFIADAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VSS_BENEFIADAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ICEE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ICEE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.V_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.V_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VSS_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VSS_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NBI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NBI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ICEE_VIVTOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ICEE_VIVTOT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ICEE_VSS_TOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ICEE_VSS_TOT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CU_DIESEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CU_DIESEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DPTO_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DPTO_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MPIO_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPIO_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUB_PECOR_PLAN.DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_PECOR_PLAN.DESCRIPCION)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

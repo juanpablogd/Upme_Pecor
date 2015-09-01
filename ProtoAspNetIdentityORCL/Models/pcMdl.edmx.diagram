@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="296bf010c36d4cddb2ca1df11d50bf4c" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_CLASE_CP" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_ORGANIZACIONES" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_PROYECTOS_PECOR" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_TIPO_ORGANIZACION" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_TIPO_PROY_PECOR" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="pcMdlSpc.FK_MU_PROY_PECOR_CLASE_CP" ManuallyRouted="false" />
+        <AssociationConnector Association="pcMdlSpc.MU_ORGANIZACIONES_FK_ESTADO" ManuallyRouted="false" />
+        <AssociationConnector Association="pcMdlSpc.MU_TIPO_ORGANIZACION_FK_ESTADO" ManuallyRouted="false" />
+        <AssociationConnector Association="pcMdlSpc.MU_TIPO_PROY_PECOR_FK_ESTADO" ManuallyRouted="false" />
+        <AssociationConnector Association="pcMdlSpc.MU_ORGANIZACIONES_FK_TIPO" ManuallyRouted="false" />
+        <AssociationConnector Association="pcMdlSpc.MU_PROYECTOS_PECOR_FK_ORGAN" ManuallyRouted="false" />
+        <AssociationConnector Association="pcMdlSpc.MU_PROYECTOS_PECOR_FK_TIPO" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="pcMdlSpc.BC_DP_SITIOS_UPME" Width="1.5" PointX="9.375" PointY="8" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_PECOR_CP_VSS" Width="1.5" PointX="11.75" PointY="13.625" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_VSS" Width="1.5" PointX="11.625" PointY="8.375" />
+        <AssociationConnector Association="pcMdlSpc.FK_MUB_VSS_ID_CENTRO_POBLADO" />
+        <AssociationConnector Association="pcMdlSpc.FK_PECOR_CP_VSS_FK1" />
+        <AssociationConnector Association="pcMdlSpc.FK_PECOR_CP_VSS_PECOR" />
+        <EntityTypeShape EntityType="pcMdlSpc.VISTA_BC_MPIO_DPTO" Width="1.5" PointX="13.375" PointY="11.75" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_GENERALES" Width="1.5" PointX="10.75" PointY="2.125" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_MODULOS" Width="1.5" PointX="0.75" PointY="4.375" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_PRIVILEGIOS" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_ROL" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_ROL_PRIVILEGIOS" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_USUARIOS" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_USUARIOS_ORG" Width="1.5" PointX="7.875" PointY="4.625" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_GRUPOS" Width="1.5" PointX="7.75" PointY="2.125" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_UNIDADES" Width="1.5" PointX="10.75" PointY="6.125" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_USUARIOS_ROLES" Width="1.5" PointX="5.25" PointY="4.125" />
+        <AssociationConnector Association="pcMdlSpc.FK_ROL_MODULO" />
+        <AssociationConnector Association="pcMdlSpc.FK_MU_USUORG_ORG" />
+        <AssociationConnector Association="pcMdlSpc.FK_MU_ROL_PRIVILEGIOS_PRI" />
+        <AssociationConnector Association="pcMdlSpc.FK_MU_ROL_PRIVILEGIOS_ROL" />
+        <AssociationConnector Association="pcMdlSpc.USUARIOS_ROLES_MU_ROL_FK" />
+        <AssociationConnector Association="pcMdlSpc.FK_USUARIOS_ROLES_USUARIOS" />
+        <EntityTypeShape EntityType="pcMdlSpc.VISTA_SUBESTACION" Width="1.5" PointX="13.375" PointY="1.125" />
+        <AssociationConnector Association="pcMdlSpc.MU_PECOR_PROY_SUBESTA_ID" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUB_PECOR_PLAN" Width="1.5" PointX="14.375" PointY="7.875" />
+        <AssociationConnector Association="pcMdlSpc.FK_MUB_PEC_PLAN" />
+        <EntityTypeShape EntityType="pcMdlSpc.MUH_PECOR_COBERTURA" Width="1.5" PointX="16.625" PointY="7.25" />
+        <AssociationConnector Association="pcMdlSpc.MUH_PECOR_COBERTURA_FK2" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

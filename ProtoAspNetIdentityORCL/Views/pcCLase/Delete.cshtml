@@ -1,0 +1,40 @@
+﻿@model NSPecor.Models.MUB_CLASE_CP
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea Eliminarlo?</h3>
+<div>
+    <h4>CLASE DE PROYECTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_CLASE_CP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_CLASE_CP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_ACTUALIZACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_ACTUALIZACION)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Ver Listado", "Index")
+        </div>
+    }
+</div>

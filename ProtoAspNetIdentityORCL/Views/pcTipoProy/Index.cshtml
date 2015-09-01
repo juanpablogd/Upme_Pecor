@@ -1,0 +1,48 @@
+﻿@model IEnumerable<NSPecor.Models.MUB_TIPO_PROY_PECOR>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tipos de proyecto</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_TIPO)
+        </th>
+        <th>
+            ACTIVO
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_TIPO)
+        </td>
+        <td>
+@if (item.ACTIVO.Trim() == "1")
+{
+    @(String.Format("SI"));
+}
+else
+{
+    @(String.Format("NO"));
+}
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID_TIPO_PROY_PECOR }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.ID_TIPO_PROY_PECOR }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ID_TIPO_PROY_PECOR })
+        </td>
+    </tr>
+}
+
+</table>

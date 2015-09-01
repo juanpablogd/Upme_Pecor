@@ -1,0 +1,113 @@
+﻿@model NSPecor.Models.MUB_USUARIOS
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+<h3> @(String.Format("Seguro que desea eliminar el Usuario '{0}' ?", Model.NOMBRE))</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NOMBRE)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NOMBRE)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CARGO)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CARGO)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DIRECCION)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DIRECCION)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TELEFONO)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TELEFONO)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CELULAR)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CELULAR)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EXTENSION)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EXTENSION)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FAX)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FAX)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EMAIL)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ESTADO)
+            </dt>
+
+            <dd>
+
+                @if (Model.ESTADO.ToString() == "1")
+                {
+                    @MvcHtmlString.Create("ACTIVO")
+                }
+                else
+                {
+                    @MvcHtmlString.Create("INACTIVO")
+                }
+
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ID_ORGANIZACION)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MUB_ORGANIZACIONES.RAZON_SOCIAL)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Borrar" class="btn btn-default" /> |
+                @Html.ActionLink("Ver Listado", "Index")
+            </div>
+        }
+    </div>

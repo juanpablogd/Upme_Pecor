@@ -1,0 +1,56 @@
+﻿@model NSPecor.Models.MUB_PECOR_CP_VSS
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea Eliminarlo?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VSS_BENEF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VSS_BENEF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEMANDA_ANUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEMANDA_ANUAL)
+        </dd>
+
+        <dt>
+            CENTRO POBLADO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BC_DP_SITIOS_UPME.NOMBRE_SITIO)
+        </dd>
+
+        <dt>
+            PROYECTO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_PROYECTOS_PECOR.CODIGO_UPME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Ver Listado", "Index")
+        </div>
+    }
+</div>

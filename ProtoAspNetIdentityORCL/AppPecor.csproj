@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBFE73EF-32AB-4270-A600-DBCD7C9E2F4D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NSPecor</RootNamespace>
+    <AssemblyName>AppPecor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="App_Start\GlobalVariables.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\pcCLaseController.cs" />
+    <Compile Include="Controllers\pcOrganizacionController.cs" />
+    <Compile Include="Controllers\pcPlanesController.cs" />
+    <Compile Include="Controllers\pcProyectoController.cs" />
+    <Compile Include="Controllers\pcTipoOrgController.cs" />
+    <Compile Include="Controllers\pcTipoProyController.cs" />
+    <Compile Include="Controllers\pcVssController.cs" />
+    <Compile Include="Controllers\PriorizacionUnoController.cs" />
+    <Compile Include="Controllers\UsuarioRolController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BC_DP_SITIOS_UPME.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetFunctionByID.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\key.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MUB_CLASE_CP.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_GENERALES.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_GRUPOS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_MODULOS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_ORGANIZACIONES.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_PECOR_CP_VSS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_PECOR_PLAN.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_PRIVILEGIOS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_PROYECTOS_PECOR.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_ROL.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_ROL_PRIVILEGIOS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_TIPO_ORGANIZACION.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_TIPO_PROY_PECOR.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_UNIDADES.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_USUARIOS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_USUARIOS_ORG.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_USUARIOS_ROLES.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUB_VSS.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUH_PECOR_COBERTURA.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcMdl.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pcMdl.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcMdl.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcMdl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pcMdl.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VISTA_BC_MPIO_DPTO.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VISTA_SUBESTACION.cs">
+      <DependentUpon>pcMdl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-nav-wizard.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\prettyPhoto.css" />
+    <Content Include="Content\Proyecto.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <EntityDeploy Include="Models\pcMdl.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>pcMdl.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\pcMdl.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pcMdl.edmx</DependentUpon>
+      <LastGenOutput>pcMdl.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\pcMdl.edmx.diagram">
+      <DependentUpon>pcMdl.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\pcMdl.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pcMdl.edmx</DependentUpon>
+      <LastGenOutput>pcMdl.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\css\bootstrap-theme.css" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\css\bootstrap.css" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\css\bootstrap.min.css" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\js\bootstrap.js" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\js\bootstrap.min.js" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\js\npm.js" />
+    <Content Include="Scripts\libs\bootstrap-switch\css\bootstrap2\bootstrap-switch.css" />
+    <Content Include="Scripts\libs\bootstrap-switch\css\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="Scripts\libs\bootstrap-switch\css\bootstrap3\bootstrap-switch.css" />
+    <Content Include="Scripts\libs\bootstrap-switch\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Scripts\libs\bootstrap-switch\js\bootstrap-switch.js" />
+    <Content Include="Scripts\libs\bootstrap-switch\js\bootstrap-switch.min.js" />
+    <Content Include="Scripts\libs\BootstrapDialog\css\bootstrap-dialog.css" />
+    <Content Include="Scripts\libs\BootstrapDialog\css\bootstrap-dialog.min.css" />
+    <Content Include="Scripts\libs\BootstrapDialog\js\bootstrap-dialog.js" />
+    <Content Include="Scripts\libs\BootstrapDialog\js\bootstrap-dialog.min.js" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\css\font-awesome.css" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\css\font-awesome.min.css" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\libs\growl\bootstrap-growl.min.js" />
+    <Content Include="Scripts\libs\jquery\jquery-ui.js" />
+    <Content Include="Scripts\libs\jquery\jquery.min.js" />
+    <Content Include="Scripts\libs\minimap\Control.MiniMap.min.css" />
+    <Content Include="Scripts\libs\minimap\Control.MiniMap.min.js" />
+    <Content Include="Scripts\libs\minimap\images\toggle.png" />
+    <Content Include="Scripts\libs\minimap\images\toggle.svg" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\legacy.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\picker.date.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\picker.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\picker.time.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\classic.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\classic.date.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\classic.time.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\default.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\default.date.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\default.time.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\themes\rtl.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ar.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\bg_BG.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\bs_BA.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ca_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\cs_CZ.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\da_DK.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\de_DE.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\el_GR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\es_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\et_EE.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\eu_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\fa_IR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\fi_FI.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\fr_FR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\gl_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\he_IL.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\hi_IN.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\hr_HR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\hu_HU.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\id_ID.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\is_IS.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\it_IT.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ja_JP.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ko_KR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\lt_LT.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\lv_LV.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\nb_NO.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ne_NP.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\nl_NL.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\no_NO.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\pl_PL.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\pt_BR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\pt_PT.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ro_RO.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\ru_RU.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\sk_SK.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\sl_SI.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\sv_SE.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\th_TH.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\tr_TR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\uk_UA.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\vi_VN.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\zh_CN.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\compressed\translations\zh_TW.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\legacy.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\picker.date.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\picker.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\picker.time.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\classic.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\classic.date.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\classic.time.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\default.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\default.date.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\default.time.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes\rtl.css" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ar.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\bg_BG.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\bs_BA.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ca_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\cs_CZ.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\da_DK.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\de_DE.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\el_GR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\es_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\et_EE.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\eu_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\fa_ir.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\fi_FI.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\fr_FR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\gl_ES.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\he_IL.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\hi_IN.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\hr_HR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\hu_HU.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\id_ID.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\is_IS.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\it_IT.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ja_JP.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ko_KR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\lt_LT.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\lv_LV.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\nb_NO.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ne_NP.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\nl_NL.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\pl_PL.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\pt_BR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\pt_PT.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ro_RO.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\ru_RU.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\sk_SK.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\sl_SI.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\sv_SE.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\th_TH.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\tr_TR.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\uk_UA.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\vi_VN.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\zh_CN.js" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\zh_TW.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\Planes.js" />
+    <Content Include="Scripts\PriorizacionUno.js" />
+    <Content Include="Scripts\Proyecto_editar.js" />
+    <Content Include="Scripts\vss.js" />
+    <Content Include="Scripts\Proyecto.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\vss_valida.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Proyectos.cshtml" />
+    <Content Include="Views\Home\Parametros.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\pcTipoProy\Create.cshtml" />
+    <Content Include="Views\pcTipoProy\Delete.cshtml" />
+    <Content Include="Views\pcTipoProy\Details.cshtml" />
+    <Content Include="Views\pcTipoProy\Edit.cshtml" />
+    <Content Include="Views\pcTipoProy\Index.cshtml" />
+    <Content Include="Views\pcTipoOrg\Create.cshtml" />
+    <Content Include="Views\pcTipoOrg\Delete.cshtml" />
+    <Content Include="Views\pcTipoOrg\Details.cshtml" />
+    <Content Include="Views\pcTipoOrg\Edit.cshtml" />
+    <Content Include="Views\pcTipoOrg\Index.cshtml" />
+    <Content Include="Views\pcCLase\Create.cshtml" />
+    <Content Include="Views\pcCLase\Delete.cshtml" />
+    <Content Include="Views\pcCLase\Details.cshtml" />
+    <Content Include="Views\pcCLase\Edit.cshtml" />
+    <Content Include="Views\pcCLase\Index.cshtml" />
+    <Content Include="Views\pcOrganizacion\Create.cshtml" />
+    <Content Include="Views\pcOrganizacion\Delete.cshtml" />
+    <Content Include="Views\pcOrganizacion\Details.cshtml" />
+    <Content Include="Views\pcOrganizacion\Edit.cshtml" />
+    <Content Include="Views\pcOrganizacion\Index.cshtml" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\css\bootstrap.css.map" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\libs\bootstrap-3.3.1\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\libs\BootstrapDialog\less\bootstrap-dialog.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\bordered-pulled.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\core.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\fixed-width.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\font-awesome.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\icons.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\larger.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\list.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\mixins.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\path.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\rotated-flipped.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\spinning.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\stacked.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\less\variables.less" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\font-awesome.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_bordered-pulled.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_core.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_fixed-width.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_icons.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_larger.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_list.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_mixins.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_path.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_rotated-flipped.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_spinning.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_stacked.scss" />
+    <Content Include="Scripts\libs\font-awesome-4.2.0\scss\_variables.scss" />
+    <Content Include="Views\pcProyecto\Create.cshtml" />
+    <Content Include="Views\pcProyecto\Delete.cshtml" />
+    <Content Include="Views\pcProyecto\Details.cshtml" />
+    <Content Include="Views\pcProyecto\Edit.cshtml" />
+    <Content Include="Views\pcProyecto\Index.cshtml" />
+    <Content Include="Views\pcVss\Create.cshtml" />
+    <Content Include="Views\pcVss\Delete.cshtml" />
+    <Content Include="Views\pcVss\Details.cshtml" />
+    <Content Include="Views\pcVss\Edit.cshtml" />
+    <Content Include="Views\pcVss\Index.cshtml" />
+    <Content Include="Views\pcVss\Listado.cshtml" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\base.date.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\base.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\base.time.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\classic.date.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\classic.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\classic.time.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\default.date.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\default.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\default.time.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\rtl.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\themes-source\_variables.less" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\FORMATTING.md" />
+    <Content Include="Scripts\libs\pickadate.js-3.5.6\translations\NAMING.md" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\UsuarioRol\Create.cshtml" />
+    <Content Include="Views\UsuarioRol\Delete.cshtml" />
+    <Content Include="Views\UsuarioRol\Details.cshtml" />
+    <Content Include="Views\UsuarioRol\Edit.cshtml" />
+    <Content Include="Views\UsuarioRol\Index.cshtml" />
+    <Content Include="Views\pcPlanes\Create.cshtml" />
+    <Content Include="Views\pcPlanes\Delete.cshtml" />
+    <Content Include="Views\pcPlanes\Details.cshtml" />
+    <Content Include="Views\pcPlanes\Edit.cshtml" />
+    <Content Include="Views\pcPlanes\Index.cshtml" />
+    <Content Include="Views\PriorizacionUno\Create.cshtml" />
+    <Content Include="Views\PriorizacionUno\Delete.cshtml" />
+    <Content Include="Views\PriorizacionUno\Details.cshtml" />
+    <Content Include="Views\PriorizacionUno\Edit.cshtml" />
+    <Content Include="Views\PriorizacionUno\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspNet.Identity.OracleProvider\AspNet.Identity.OracleProvider.csproj">
+      <Project>{b6536b7f-f5c9-4362-847f-b6f8d5d5f5db}</Project>
+      <Name>AspNet.Identity.OracleProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3977</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3988/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

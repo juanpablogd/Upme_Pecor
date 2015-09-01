@@ -1,0 +1,37 @@
+﻿@model NSPecor.Models.MUB_USUARIOS_ROLES
+
+@{
+    ViewBag.Title = "Borrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3> @(String.Format("Seguro que desea eliminar el Rol para el Usuario '{0}' ?", @Html.DisplayFor(model => model.MUB_USUARIOS.NOMBRE)))</h3> 
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MUB_ROL.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUB_ROL.NOMBRE)
+        </dd>
+        <dt>
+           MODULO
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MUB_ROL.MUB_MODULOS.DESCRIPCION)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Ver Roles", "Index")
+        </div>
+    }
+</div>

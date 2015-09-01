@@ -1,0 +1,91 @@
+﻿@model IEnumerable<NSPecor.Models.MUB_PROYECTOS_PECOR>
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listado de Proyectos / Programas</h2>
+@if (ViewBag.Habilitado == "1")
+{
+        <p> 
+            @Html.ActionLink("Crear Nuevo", "Create",null , new { @class = "btn btn-success btn-xs" })    
+        </p>
+}else{
+        <table class="table">
+            <tr>
+                <th>
+                    NO HAY PLANES DISPONIBLES PARA REGISTRO DE PROYECTOS.
+                </th>
+            </tr>
+         </table>
+}
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PROG_PROY)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CODIGO_UPME)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NOMBRE)
+                </th>
+                <th>
+                    CLASE
+                </th>
+                <th>
+                    ORGANIZACION
+                </th>
+                <th>
+                    TIPO
+                </th>
+                <th>
+                    PLAN
+                </th>        
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @if (Html.DisplayFor(modelItem => item.PROG_PROY).ToString() == "pg")
+                    {
+                        @(String.Format("Programa"));
+                    }
+                    else
+                    {
+                        @(String.Format("Proyecto"));
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CODIGO_UPME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MUB_CLASE_CP.NOM_CLASE_CP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MUB_ORGANIZACIONES.RAZON_SOCIAL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MUB_TIPO_PROY_PECOR.NOM_TIPO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MUB_PECOR_PLAN.DESCRIPCION)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalle", "Details", new { id = item.ID_PROYECTO_PECOR }, new { @class = "btn btn-success btn-xs" }) |
+                    @if (ViewBag.Habilitado == "1")
+                    {
+                        @Html.ActionLink("Editar", "Edit", new { id = item.ID_PROYECTO_PECOR }, new { @class = "btn btn-info btn-xs" }) 
+                        @Html.ActionLink("Borrar", "Delete", new { id = item.ID_PROYECTO_PECOR }, new { @class = "btn btn-danger btn-xs" })
+                        @(String.Format("  |  "));
+                        @Html.ActionLink("Viviendas", "vss", new { id = item.ID_PROYECTO_PECOR }, new { @class = "btn btn-warning btn-xs" })
+                    }
+                </td>
+            </tr>
+        }
+        </table>
+

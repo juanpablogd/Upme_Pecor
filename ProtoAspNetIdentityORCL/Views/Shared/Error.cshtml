@@ -1,0 +1,16 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2 class="text-danger">Error.</h2>
+<h3 class="text-danger">Ocurrió un error mientras se realizaba su solicitud. Posibles causas:</h3>
+<ol>
+    <li>Esta intentando Borrar un dato que se está utilizando en otro dato Maestro.</li>
+    <li>Problemas de Conexión de Red. </li>
+</ol>
+<p>
+    @Html.ActionLink("Ir al Inicio", "Index")
+</p>
+
