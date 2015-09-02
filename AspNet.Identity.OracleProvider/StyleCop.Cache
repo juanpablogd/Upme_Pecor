@@ -2562,7 +2562,7 @@
     <timestamps>
       <styleCop>2015/05/12 17:26:49.529</styleCop>
       <settingsFile>2015/05/12 17:26:49.529</settingsFile>
-      <sourceFile>2015/06/24 17:43:06.656</sourceFile>
+      <sourceFile>2015/09/02 18:13:59.737</sourceFile>
       <parser>2015/05/12 17:26:49.529</parser>
       <StyleCop.CSharp.DocumentationRules>2015/05/12 17:26:49.529</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>471780074</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -4089,6 +4089,72 @@
         <endColumn>52</endColumn>
         <warning>False</warning>
       </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to EmailCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>197</line>
+        <index>11639</index>
+        <endIndex>11646</endIndex>
+        <startLine>197</startLine>
+        <startColumn>33</startColumn>
+        <endLine>197</endLine>
+        <endColumn>40</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to DireccionCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>198</line>
+        <index>11698</index>
+        <endIndex>11709</endIndex>
+        <startLine>198</startLine>
+        <startColumn>37</startColumn>
+        <endLine>198</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to TelefonoCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>199</line>
+        <index>11760</index>
+        <endIndex>11770</endIndex>
+        <startLine>199</startLine>
+        <startColumn>36</startColumn>
+        <endLine>199</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to CelularCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>200</line>
+        <index>11820</index>
+        <endIndex>11829</endIndex>
+        <startLine>200</startLine>
+        <startColumn>35</startColumn>
+        <endLine>200</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ExtensionCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>201</line>
+        <index>11881</index>
+        <endIndex>11892</endIndex>
+        <startLine>201</startLine>
+        <startColumn>37</startColumn>
+        <endLine>201</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to FaxCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>202</line>
+        <index>11938</index>
+        <endIndex>11943</endIndex>
+        <startLine>202</startLine>
+        <startColumn>31</startColumn>
+        <endLine>202</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
         <line>184</line>
@@ -4140,442 +4206,442 @@
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>203</line>
+        <line>209</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
         <context>A closing curly bracket must not be preceded by a blank line.</context>
-        <line>231</line>
+        <line>237</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParametersMustBeOnSameLineOrSeparateLines" ruleCheckId="SA1117">
         <context>All method parameters must be placed on the same line, or each parameter must be placed on a separate line.</context>
-        <line>206</line>
+        <line>212</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="SplitParametersMustStartOnLineAfterDeclaration" ruleCheckId="SA1116">
         <context>If the method parameters are on separate lines, the first parameter must begin on the line beneath the name of the method.</context>
-        <line>206</line>
+        <line>212</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParameterMustFollowComma" ruleCheckId="SA1115">
         <context>The parameter must begin on the line after the previous parameter.</context>
-        <line>207</line>
+        <line>213</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
         <context>Use the built-in type alias 'string' rather than String or System.String.</context>
-        <line>206</line>
+        <line>212</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to _db must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>205</line>
-        <index>11784</index>
-        <endIndex>11786</endIndex>
-        <startLine>205</startLine>
+        <line>211</line>
+        <index>12136</index>
+        <endIndex>12138</endIndex>
+        <startLine>211</startLine>
         <startColumn>26</startColumn>
-        <endLine>205</endLine>
+        <endLine>211</endLine>
         <endColumn>28</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to IdCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>11939</index>
-        <endIndex>11943</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12291</index>
+        <endIndex>12295</endIndex>
+        <startLine>213</startLine>
         <startColumn>47</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>51</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to EmailCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>11946</index>
-        <endIndex>11953</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12298</index>
+        <endIndex>12305</endIndex>
+        <startLine>213</startLine>
         <startColumn>54</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>61</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to NombreCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>11956</index>
-        <endIndex>11964</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12308</index>
+        <endIndex>12316</endIndex>
+        <startLine>213</startLine>
         <startColumn>64</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>72</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to CargoCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>11967</index>
-        <endIndex>11974</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12319</index>
+        <endIndex>12326</endIndex>
+        <startLine>213</startLine>
         <startColumn>75</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>82</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to DireccionCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>11977</index>
-        <endIndex>11988</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12329</index>
+        <endIndex>12340</endIndex>
+        <startLine>213</startLine>
         <startColumn>85</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>96</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to TelefonoCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>11991</index>
-        <endIndex>12001</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12343</index>
+        <endIndex>12353</endIndex>
+        <startLine>213</startLine>
         <startColumn>99</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>109</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to CelularCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>12004</index>
-        <endIndex>12013</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12356</index>
+        <endIndex>12365</endIndex>
+        <startLine>213</startLine>
         <startColumn>112</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>121</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to ExtensionCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>12016</index>
-        <endIndex>12027</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12368</index>
+        <endIndex>12379</endIndex>
+        <startLine>213</startLine>
         <startColumn>124</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>135</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to FaxCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>12029</index>
-        <endIndex>12034</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12381</index>
+        <endIndex>12386</endIndex>
+        <startLine>213</startLine>
         <startColumn>137</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>142</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to EstadoCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>12037</index>
-        <endIndex>12045</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12389</index>
+        <endIndex>12397</endIndex>
+        <startLine>213</startLine>
         <startColumn>145</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>153</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to TableName must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>207</line>
-        <index>12048</index>
-        <endIndex>12056</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12400</index>
+        <endIndex>12408</endIndex>
+        <startLine>213</startLine>
         <startColumn>156</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>164</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
         <context>Invalid spacing around the comma.</context>
-        <line>207</line>
-        <index>12028</index>
-        <endIndex>12028</endIndex>
-        <startLine>207</startLine>
+        <line>213</line>
+        <index>12380</index>
+        <endIndex>12380</endIndex>
+        <startLine>213</startLine>
         <startColumn>136</startColumn>
-        <endLine>207</endLine>
+        <endLine>213</endLine>
         <endColumn>136</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>233</line>
+        <line>239</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to _db must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>235</line>
-        <index>13092</index>
-        <endIndex>13094</endIndex>
-        <startLine>235</startLine>
+        <line>241</line>
+        <index>13444</index>
+        <endIndex>13446</endIndex>
+        <startLine>241</startLine>
         <startColumn>26</startColumn>
-        <endLine>235</endLine>
+        <endLine>241</endLine>
         <endColumn>28</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to TableName must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>236</line>
-        <index>13146</index>
-        <endIndex>13154</endIndex>
-        <startLine>236</startLine>
+        <line>242</line>
+        <index>13498</index>
+        <endIndex>13506</endIndex>
+        <startLine>242</startLine>
         <startColumn>36</startColumn>
-        <endLine>236</endLine>
+        <endLine>242</endLine>
         <endColumn>44</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to EmailCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>236</line>
-        <index>13168</index>
-        <endIndex>13175</endIndex>
-        <startLine>236</startLine>
+        <line>242</line>
+        <index>13520</index>
+        <endIndex>13527</endIndex>
+        <startLine>242</startLine>
         <startColumn>58</startColumn>
-        <endLine>236</endLine>
+        <endLine>242</endLine>
         <endColumn>65</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to IdCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>242</line>
-        <index>13493</index>
-        <endIndex>13497</endIndex>
-        <startLine>242</startLine>
+        <line>248</line>
+        <index>13845</index>
+        <endIndex>13849</endIndex>
+        <startLine>248</startLine>
         <startColumn>28</startColumn>
-        <endLine>242</endLine>
+        <endLine>248</endLine>
         <endColumn>32</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to EmailCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>243</line>
-        <index>13546</index>
-        <endIndex>13553</endIndex>
-        <startLine>243</startLine>
+        <line>249</line>
+        <index>13898</index>
+        <endIndex>13905</endIndex>
+        <startLine>249</startLine>
         <startColumn>34</startColumn>
-        <endLine>243</endLine>
+        <endLine>249</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to PwdHashCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>244</line>
-        <index>13601</index>
-        <endIndex>13610</endIndex>
-        <startLine>244</startLine>
+        <line>250</line>
+        <index>13953</index>
+        <endIndex>13962</endIndex>
+        <startLine>250</startLine>
         <startColumn>33</startColumn>
-        <endLine>244</endLine>
+        <endLine>250</endLine>
         <endColumn>42</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to PwdHashCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>244</line>
-        <index>13639</index>
-        <endIndex>13648</endIndex>
-        <startLine>244</startLine>
+        <line>250</line>
+        <index>13991</index>
+        <endIndex>14000</endIndex>
+        <startLine>250</startLine>
         <startColumn>71</startColumn>
-        <endLine>244</endLine>
+        <endLine>250</endLine>
         <endColumn>80</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to EstadoCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>245</line>
-        <index>13712</index>
-        <endIndex>13720</endIndex>
-        <startLine>245</startLine>
+        <line>251</line>
+        <index>14064</index>
+        <endIndex>14072</endIndex>
+        <startLine>251</startLine>
         <startColumn>42</startColumn>
-        <endLine>245</endLine>
+        <endLine>251</endLine>
         <endColumn>50</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>236</line>
-        <index>13145</index>
-        <endIndex>13145</endIndex>
-        <startLine>236</startLine>
+        <line>242</line>
+        <index>13497</index>
+        <endIndex>13497</endIndex>
+        <startLine>242</startLine>
         <startColumn>35</startColumn>
-        <endLine>236</endLine>
+        <endLine>242</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>236</line>
+        <line>242</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>236</line>
-        <index>13155</index>
-        <endIndex>13155</endIndex>
-        <startLine>236</startLine>
+        <line>242</line>
+        <index>13507</index>
+        <endIndex>13507</endIndex>
+        <startLine>242</startLine>
         <startColumn>45</startColumn>
-        <endLine>236</endLine>
+        <endLine>242</endLine>
         <endColumn>45</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>236</line>
-        <index>13167</index>
-        <endIndex>13167</endIndex>
-        <startLine>236</startLine>
+        <line>242</line>
+        <index>13519</index>
+        <endIndex>13519</endIndex>
+        <startLine>242</startLine>
         <startColumn>57</startColumn>
-        <endLine>236</endLine>
+        <endLine>242</endLine>
         <endColumn>57</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>236</line>
-        <index>13176</index>
-        <endIndex>13176</endIndex>
-        <startLine>236</startLine>
+        <line>242</line>
+        <index>13528</index>
+        <endIndex>13528</endIndex>
+        <startLine>242</startLine>
         <startColumn>66</startColumn>
-        <endLine>236</endLine>
+        <endLine>242</endLine>
         <endColumn>66</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>249</line>
+        <line>255</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to _db must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>251</line>
-        <index>13880</index>
-        <endIndex>13882</endIndex>
-        <startLine>251</startLine>
+        <line>257</line>
+        <index>14232</index>
+        <endIndex>14234</endIndex>
+        <startLine>257</startLine>
         <startColumn>32</startColumn>
-        <endLine>251</endLine>
+        <endLine>257</endLine>
         <endColumn>34</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to PwdHashCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>252</line>
-        <index>13939</index>
-        <endIndex>13948</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14291</index>
+        <endIndex>14300</endIndex>
+        <startLine>258</startLine>
         <startColumn>27</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>36</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to TableName must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>252</line>
-        <index>13961</index>
-        <endIndex>13969</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14313</index>
+        <endIndex>14321</endIndex>
+        <startLine>258</startLine>
         <startColumn>49</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>57</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to IdCol must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>252</line>
-        <index>13983</index>
-        <endIndex>13987</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14335</index>
+        <endIndex>14339</endIndex>
+        <startLine>258</startLine>
         <startColumn>71</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>75</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
-        <index>13938</index>
-        <endIndex>13938</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14290</index>
+        <endIndex>14290</endIndex>
+        <startLine>258</startLine>
         <startColumn>26</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>26</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
+        <line>258</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
-        <index>13949</index>
-        <endIndex>13949</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14301</index>
+        <endIndex>14301</endIndex>
+        <startLine>258</startLine>
         <startColumn>37</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>37</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
-        <index>13960</index>
-        <endIndex>13960</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14312</index>
+        <endIndex>14312</endIndex>
+        <startLine>258</startLine>
         <startColumn>48</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>48</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
-        <index>13970</index>
-        <endIndex>13970</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14322</index>
+        <endIndex>14322</endIndex>
+        <startLine>258</startLine>
         <startColumn>58</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>58</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
-        <index>13982</index>
-        <endIndex>13982</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14334</index>
+        <endIndex>14334</endIndex>
+        <startLine>258</startLine>
         <startColumn>70</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>70</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
         <context>The spacing around the symbol '+' is invalid.</context>
-        <line>252</line>
-        <index>13988</index>
-        <endIndex>13988</endIndex>
-        <startLine>252</startLine>
+        <line>258</line>
+        <index>14340</index>
+        <endIndex>14340</endIndex>
+        <startLine>258</startLine>
         <startColumn>76</startColumn>
-        <endLine>252</endLine>
+        <endLine>258</endLine>
         <endColumn>76</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>258</line>
+        <line>264</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -5876,7 +5942,7 @@
     <timestamps>
       <styleCop>2015/05/12 17:26:49.529</styleCop>
       <settingsFile>2015/05/12 17:26:49.529</settingsFile>
-      <sourceFile>2015/08/19 03:29:07.837</sourceFile>
+      <sourceFile>2015/09/02 16:40:25.093</sourceFile>
       <parser>2015/05/12 17:26:49.529</parser>
       <StyleCop.CSharp.DocumentationRules>2015/05/12 17:26:49.529</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>471780074</StyleCop.CSharp.DocumentationRules.FilesHashCode>

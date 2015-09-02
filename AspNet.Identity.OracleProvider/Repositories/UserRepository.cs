@@ -193,7 +193,13 @@ namespace AspNet.Identity.OracleProvider.Repositories
                     Id = row[IdCol].ToString(),
                     UserName = row[EmailCol].ToString(),
                     PwdHash = row[PwdHashCol].ToString().HasValue() ? row[PwdHashCol].ToString() : null,
-                    Estado = int.Parse(row[EstadoCol].ToString()) == 1
+                    Estado = int.Parse(row[EstadoCol].ToString()) == 1,
+                    Cargo = row[EmailCol].ToString(),
+                    Direccion = row[DireccionCol].ToString(),
+                    Telefono = row[TelefonoCol].ToString(),
+                    Celular = row[CelularCol].ToString(),
+                    Extension = row[ExtensionCol].ToString(),
+                    Fax = row[FaxCol].ToString()
                 };
             }
 
