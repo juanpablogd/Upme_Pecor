@@ -21,9 +21,12 @@ namespace NSPecor.Controllers
                     GlobalVariables.idUsuario = item.ID_USUARIO.ToString();
                     GlobalVariables.idOrganizacion = item.ID_ORGANIZACION.ToString();
                 }
+                return View();
             }
-
-            return View();
+            else
+            {
+                return RedirectToAction("../Account/Login/");
+            }
         }
 
         public ActionResult Parametros()

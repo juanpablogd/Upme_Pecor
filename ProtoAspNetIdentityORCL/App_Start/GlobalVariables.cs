@@ -26,7 +26,6 @@ namespace NSPecor.Controllers
         }
         public static string idOrganizacion
         {
-
             get
             {
                 return HttpContext.Current.Application["idOrganizacion"] as string;

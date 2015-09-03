@@ -76,22 +76,41 @@ namespace NSPecor.Controllers
             };
 
             pcUpmeCnx dbUsr = new pcUpmeCnx();
+
+            if (GlobalVariables.idUsuario == null || GlobalVariables.idUsuario == "" || GlobalVariables.idOrganizacion == null)
+            {
+                var usr_actual = User.Identity.GetUserName();
+                foreach (var item in dbUsr.MUB_USUARIOS.Where(u => u.EMAIL == User.Identity.Name.ToString()))
+                {
+                    GlobalVariables.idUsuario = item.ID_USUARIO.ToString();
+                    GlobalVariables.idOrganizacion = item.ID_ORGANIZACION.ToString();
+                }
+            }
+
+            
             long idusr = Convert.ToInt32(GlobalVariables.idUsuario);
             long idModulo = Convert.ToInt32(GlobalVariables.idModulo);
 
-            var tmp = dbUsr.MUB_USUARIOS_ROLES.Where(u => u.ID_USUARIO == idusr).Include(m => m.MUB_ROL).Where(r => r.MUB_ROL.ID_MODULO == idModulo).Include(d => d.MUB_ROL.MUB_MODULOS).Include(u => u.MUB_USUARIOS).Include(u => u.MUB_USUARIOS.MUB_ORGANIZACIONES);
-            foreach (var item in tmp)
+            var tmpUsr = dbUsr.MUB_USUARIOS.Where(u => u.ID_USUARIO == idusr);
+            foreach (var item in tmpUsr)
             {
-                string nom_Usuario = item.MUB_USUARIOS.NOMBRE.ToString();
+                string nom_Usuario = item.NOMBRE.ToString();
                 @ViewBag.Nombre = nom_Usuario;
 
-                string nom_Organizacion = item.MUB_USUARIOS.MUB_ORGANIZACIONES.RAZON_SOCIAL.ToString();
+            }
+            var tmpOrg = dbUsr.MUB_USUARIOS.Where(u => u.ID_USUARIO == idusr).Include(u => u.MUB_ORGANIZACIONES);
+            foreach (var item in tmpOrg)
+            {
+                string nom_Organizacion = item.MUB_ORGANIZACIONES.RAZON_SOCIAL.ToString();
                 @ViewBag.Organizacion = nom_Organizacion;
-
+            }
+            var tmpRol = dbUsr.MUB_USUARIOS_ROLES.Where(u => u.ID_USUARIO == idusr).Include(m => m.MUB_ROL).Where(r => r.MUB_ROL.ID_MODULO == idModulo).Include(d => d.MUB_ROL.MUB_MODULOS);
+            foreach (var item in tmpRol)
+            {
                 string nom_rol = item.MUB_ROL.NOMBRE.ToString();
                 @ViewBag.Perfil = nom_rol;
-
             }
+
 
             @ViewBag.Usuario = User.Identity.Name.ToString();
             //@ViewBag.Perfil;
