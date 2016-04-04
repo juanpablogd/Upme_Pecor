@@ -10,16 +10,6 @@
     <li>Esta intentando Borrar un dato que se está utilizando en otro dato Maestro.</li>
     <li>Problemas de Conexión de Red. </li>
 </ol>
-
-@if (Model != null)
-{
-    <h4 class="text-danger">Detalle técnico: </h4>
-    <h5>@Model.Exception.GetType().Name</h5>
-    
-    <li>@Model.Exception.ToString()</li>
-    <li>thrown in @Model.ControllerName @Model.ActionName</li>
-}
-
 <p>
     @Html.ActionLink("Ir al Inicio", "Index")
 </p>
